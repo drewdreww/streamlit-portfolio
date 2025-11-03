@@ -20,7 +20,7 @@ with st.sidebar:
     st.markdown("---")
     page_selection = st.radio(
         "Go to",
-        ["🏠 Home", "📖 Autobiography", "💼 Projects", "📬 Contact"],
+        ["🏠 Home", "📖 My Life", "💼 Projects", "📬 Contact"],
         label_visibility="collapsed",
     )
     st.markdown("---")
@@ -52,7 +52,7 @@ with st.sidebar:
 
 
 if page_selection == "🏠 Home":
-    st.title("Welcome to My Digital Space! 👋")
+    st.title("Welcome! 👋")
     st.markdown("---")
 
     col1, col2 = st.columns([1, 2])
@@ -60,19 +60,16 @@ if page_selection == "🏠 Home":
     with col1:
         st.image(
             "images/wow.jpg",
-            caption="Ralph Andrew Salvame",
             use_container_width=True,
-            output_format="PNG",
+            output_format="JPG",
         )
 
     with col2:
-        st.header("I'm Ralph Andrew Salvame.")
-        st.subheader("Aspiring Developer, Tech Enthusiast, and Lifelong Learner.")
+        st.header("I'm Ralph Andrew Salvame!")
+        st.subheader("Aspiring Developer :D")
         st.write(
             """
-            Hello! I'm passionate about building things for the web and exploring new technologies.
-            This interactive web app, built with Streamlit, is my personal portfolio and a
-            small window into my journey.
+            im passionate about building apps and solving problems!
             """
         )
         st.markdown(
@@ -80,9 +77,8 @@ if page_selection == "🏠 Home":
             **What I'm currently focused on:**
             - 🚀 Honing my skills in Python and data science.
             - 🌐 Learning new web development frameworks.
-            - 🤖 Exploring the world of AI and Machine Learning.
+            - 🦾 Interested about AI and Machine Learning.
 
-            Feel free to browse my portfolio, learn a bit about my story, or send me a message!
             """
         )
         st.toast("Welcome!", icon="🎉")
@@ -92,23 +88,21 @@ if page_selection == "🏠 Home":
     c1, c2, c3 = st.columns(3)
     with c1:
         st.info("**Data Analysis**", icon="📊")
-        st.write("Turning data into actionable insights.")
     with c2:
         st.info("**Web Development**", icon="💻")
-        st.write("Building responsive and user-friendly web apps.")
     with c3:
         st.info("**Problem Solving**", icon="💡")
-        st.write("Deconstructing complex problems into elegant solutions.")
 
 
-# --- Autobiography Page ---
-elif page_selection == "📖 Autobiography":
+
+
+elif page_selection == "📖 My Life":
     st.title("My Story 📖")
     st.markdown("---")
 
     st.header("The Journey So Far")
 
-    with st.expander("🌱 Early Life ", expanded=True):
+    with st.expander("🌱 Early Life "):
         st.write(
             """
             I like computers ever since :)
@@ -180,11 +174,12 @@ elif page_selection == "💼 Projects":
         st.toast("give me job")
         st.toast("no future T_T")
         st.toast("ohahay")
+        st.toast("dawat rakog 5 sir")
+        st.balloons()
     
     
 
 
-# --- Contact Page ---
 elif page_selection == "📬 Contact":
     st.title("Get In Touch! 📬")
     st.markdown("---")
