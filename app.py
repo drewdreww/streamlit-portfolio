@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 
-# --- Page Configuration ---
+
 st.set_page_config(
     page_title="Salvs Portfolio",
     page_icon="👨‍💻",
@@ -9,7 +9,7 @@ st.set_page_config(
     initial_sidebar_state="expanded",
 )
 
-# --- Sidebar Navigation ---
+
 with st.sidebar:
     st.image(
         "images/atabzzz.jpg",
@@ -50,7 +50,7 @@ with st.sidebar:
     """, unsafe_allow_html=True)
 
 
-# --- Home Page ---
+
 if page_selection == "🏠 Home":
     st.title("Welcome to My Digital Space! 👋")
     st.markdown("---")
@@ -89,7 +89,6 @@ if page_selection == "🏠 Home":
 
     st.markdown("---")
     st.subheader("My Core Competencies")
-    # Using columns for a cleaner layout
     c1, c2, c3 = st.columns(3)
     with c1:
         st.info("**Data Analysis**", icon="📊")
@@ -170,7 +169,7 @@ elif page_selection == "📖 Autobiography":
     st.progress(98)
 
 
-# --- Portfolio Page ---
+
 elif page_selection == "💼 Projects":
     st.title("My Projects 💼")
     st.markdown("---")
@@ -209,7 +208,7 @@ elif page_selection == "📬 Contact":
         elif "@" not in email:
             st.warning("Please enter a valid email address.", icon="📧")
         else:
-            # In a real app, you'd email this or save it to a DB
+            
             st.success(
                 f"Thank you, {name}! Your message has been sent. char langs", icon="✅"
             )
